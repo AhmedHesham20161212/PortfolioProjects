@@ -157,8 +157,8 @@ ORDER BY 3 DESC;
 SELECT *
 FROM ['CovidDeath'] dea  -- Aliasing the table as dea
 JOIN ['CovidVaccinations'] vac  -- Aliasing the table as vac
-ON co_d.location = co_v.location 
-AND co_d.date = co_v.date;
+ON dea.location = vac.location 
+AND dea.date = vac.date;
 
 -- Tracking number of vaccinations for each country around the world
 -- Sorting from highest to lowest
